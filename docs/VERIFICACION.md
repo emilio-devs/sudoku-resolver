@@ -1,5 +1,11 @@
 # Verificación de la versión inicial
 
+## Revisión 2.2
+
+El bloque de ejemplo del README solo importa `random`, hereda de
+`SolvingAlgorithm`, lee la primera celda vacía y emite una única colocación
+aleatoria antes de terminar. No calcula candidatos ni implementa una estrategia.
+
 ## Revisión 2.1
 
 El README se redujo a requisitos, preparación, arranque, uso de las vistas,

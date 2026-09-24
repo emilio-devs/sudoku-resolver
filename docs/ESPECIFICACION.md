@@ -1,6 +1,13 @@
 # Especificación · Laboratorio de Sudoku
 
-Versión: 2.1 · Estado: **revisiones solicitadas y autorizadas por el usuario**
+Versión: 2.2 · Estado: **revisiones solicitadas y autorizadas por el usuario**
+
+### Revisión 2.2 · Ejemplo sin estrategia
+
+El README no incluirá un algoritmo de candidato único ni otra estrategia completa.
+El ejemplo se limita a localizar la primera celda vacía y emitir un número
+aleatorio, que normalmente fallará. Su objetivo es demostrar la estructura del
+complemento y el uso de `yield self.place(...)`, dejando la resolución al usuario.
 
 ### Revisión 2.1 · README orientado al uso
 

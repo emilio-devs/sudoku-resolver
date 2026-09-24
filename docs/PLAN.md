@@ -1,5 +1,10 @@
 # Plan de implementación
 
+## Revisión 2.2
+
+Sustituir el candidato único del README por un ejemplo aleatorio mínimo que enseñe
+solo el contrato de integración y no resuelva ninguna técnica por el usuario.
+
 ## Revisión 2.1
 
 Reescribir el README como guía breve de instalación, arranque, uso y creación de

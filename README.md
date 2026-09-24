@@ -70,55 +70,36 @@ por ejemplo:
 soluciones/s01_mi_algoritmo.py
 ```
 
-Cada archivo debe contener una clase que herede de `SolvingAlgorithm`. Este
-ejemplo rellena las celdas que tienen un único candidato:
+Cada archivo debe contener una clase que herede de `SolvingAlgorithm`. El ejemplo
+solo prueba un número aleatorio en la primera celda vacía; muestra cómo conectar
+un algoritmo sin regalar una estrategia de resolución:
 
 ```python
-from collections.abc import Iterator
+import random
 
-from sudoku.algorithm import SolvingAlgorithm, Step
+from sudoku.algorithm import SolvingAlgorithm
 
 
 class MiAlgoritmo(SolvingAlgorithm):
-    name = "Mi algoritmo"
-    description = "Coloca celdas con un único candidato."
+    name = "Ejemplo aleatorio"
+    description = "Prueba un número aleatorio."
 
-    def _candidatos(self, fila: int, columna: int) -> set[int]:
-        usados = set(self.board[fila])
-        usados.update(self.board[f][columna] for f in range(9))
-
-        inicio_fila = (fila // 3) * 3
-        inicio_columna = (columna // 3) * 3
-        usados.update(
-            self.board[f][c]
-            for f in range(inicio_fila, inicio_fila + 3)
-            for c in range(inicio_columna, inicio_columna + 3)
-        )
-        return set(range(1, 10)) - usados
-
-    def solve(self) -> Iterator[Step]:
-        while True:
-            progreso = False
-
-            for fila in range(9):
-                for columna in range(9):
-                    if self.board[fila][columna] != 0:
-                        continue
-
-                    candidatos = self._candidatos(fila, columna)
-                    if len(candidatos) == 1:
-                        numero = candidatos.pop()
-                        yield self.place(
-                            fila,
-                            columna,
-                            numero,
-                            "Único candidato de la celda",
-                        )
-                        progreso = True
-
-            if not progreso:
-                return
+    def solve(self):
+        for fila in range(9):
+            for columna in range(9):
+                if self.board[fila][columna] == 0:
+                    numero = random.randint(1, 9)
+                    yield self.place(
+                        fila,
+                        columna,
+                        numero,
+                        "Número aleatorio",
+                    )
+                    return
 ```
+
+Este ejemplo normalmente fallará porque no intenta descubrir el valor correcto.
+Su única finalidad es enseñar la estructura y dejar la estrategia en tus manos.
 
 Reinicia la aplicación después de crear o modificar un archivo para que vuelva a
 descubrir las soluciones.
