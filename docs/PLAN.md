@@ -1,5 +1,11 @@
 # Plan de implementación
 
+## Revisión 2.1
+
+Reescribir el README como guía breve de instalación, arranque, uso y creación de
+soluciones; incluir un ejemplo funcional de la API mínima y mantener los detalles
+de implementación en la especificación.
+
 ## Revisión 2.0
 
 Inicializar Git en `main`, ignorar todas las soluciones salvo el ejemplo y

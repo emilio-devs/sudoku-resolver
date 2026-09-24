@@ -1,5 +1,12 @@
 # Verificación de la versión inicial
 
+## Revisión 2.1
+
+El README se redujo a requisitos, preparación, arranque, uso de las vistas,
+creación de una solución, contrato mínimo y ejecución de pruebas. El ejemplo
+documentado calcula sus propios candidatos y solo usa `self.board`, `place()` y
+`solve()`.
+
 ## Revisión 2.0
 
 **21 pruebas correctas.** El índice de Git contiene `s00_ejemplo.py`, pero no las

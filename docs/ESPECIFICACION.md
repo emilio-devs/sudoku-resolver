@@ -1,6 +1,14 @@
 # Especificación · Laboratorio de Sudoku
 
-Versión: 2.0 · Estado: **revisiones solicitadas y autorizadas por el usuario**
+Versión: 2.1 · Estado: **revisiones solicitadas y autorizadas por el usuario**
+
+### Revisión 2.1 · README orientado al uso
+
+El README público se limita a preparar e iniciar la aplicación, recorrer su flujo
+principal y crear soluciones mediante la API educativa. Se eliminan del README
+los detalles internos del modelo, generación, instrumentación e historial que no
+son necesarios para usar el proyecto. La especificación técnica conserva esos
+detalles como referencia de implementación.
 
 ### Revisión 2.0 · Distribución pública
 
